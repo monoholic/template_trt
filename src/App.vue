@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-layout ref="app" class="rounded rounded-md">
+    <AppBar/>
+    <MenuBar/>
+    <v-main class="d-flex align-center justify-center" height="100%">
+      <router-view></router-view>
+    </v-main>
+
+    <FooterView/>
+  </v-layout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  // import { useLayout } from 'vuetify'
+  import AppBar from './components/AppBar.vue';
+  import FooterView from './components/FooterBar.vue';
+  import MenuBar from './components/MenuBar.vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    components: { AppBar, FooterView, MenuBar },
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

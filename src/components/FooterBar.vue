@@ -1,0 +1,14 @@
+<template>
+    <v-footer
+        name="footer"
+        app
+    >
+        <v-btn
+        class="mx-auto"
+        variant="text"
+        @click="print('footer')"
+        >
+        Footer
+        </v-btn>
+    </v-footer>
+</template>
